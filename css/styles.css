@@ -1,25 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
-
 .altura {
-    height: 100vh;
+    max-height: 100%;
 }
-
 .dosJuntos {
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
-
 .colc {
     display: flex;
     justify-content: center;
@@ -27,17 +25,22 @@ body {
 }
 
 .pantalla {
-    width: 60em;
-    height: 30em;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-    background-color: aqua;
+    background-color: rgb(60, 60, 60);
 }
 
+
+
+
 .tvDiseno {
+    max-width: 100%;
+    max-height: 100%;
     width: 60em;
     height: 30em;
     display: flex;
@@ -56,21 +59,13 @@ body {
     font-size: medium;
 
 }
-@keyframes hideMe {
-    0% {
-        opacity: 1;
-    }
-
-    99.99% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+#canal {
+    color: white;
+    font-size: medium;
 }
-
 .tvDisenoUp {
+    max-width: 100%;
+    max-height: 100%;
     width: 60em;
     height: 4em;
     display: flex;
@@ -82,6 +77,8 @@ body {
 }
 
 .tvDisenoDown {
+    max-width: 100%;
+    max-height: 100%;
     width: 60em;
     height: 4em;
     display: flex;
@@ -91,8 +88,8 @@ body {
 }
 
 .scrennUpLeft {
-    width: 30em;
-    height: 4em;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,8 +97,8 @@ body {
 }
 
 .scrennUpCenterLeft {
-    width: 10em;
-    height: 4em;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +107,9 @@ body {
 }
 
 .scrennUpCenterRight {
-    width: 10em;
+    max-width: 100%;
+    max-height: 100%;
+    width: 5em;
     height: 4em;
     display: flex;
     justify-content: center;
@@ -120,16 +119,18 @@ body {
 }
 
 .scrennUpRight {
-    width: 10em;
+    width: 5em;
     height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     box-sizing: content-box;
-    background-color: rgb(107, 24, 78);
 }
 
 .scrennDownLeft {
+    max-width: 100%;
+    max-height: 100%;
     width: 4em;
     height: 4em;
     display: flex;
@@ -140,6 +141,8 @@ body {
 }
 
 .scrennDownCenter {
+    max-width: 100%;
+    max-height: 100%;
     width: 52em;
     height: 4em;
     color: white;
@@ -151,6 +154,8 @@ body {
 }
 
 .scrennDownRight {
+    max-width: 100%;
+    max-height: 100%;
     width: 4em;
     height: 4em;
     display: flex;
@@ -196,6 +201,9 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    margin-top: 2em;
+    margin-left: 5em;
+    border-radius: 1em 1em 2em 2em;
 
 }
 
@@ -278,6 +286,8 @@ body {
 }
 
 .botonesMidUpColocador {
+    font-size: xx-large;
+    font-weight: bold;
     width: 3.3em;
     height: 5em;
     display: flex;
@@ -308,7 +318,7 @@ body {
     background-color: aqua;
 }
 
-.botonChanMas {
+.botonChan {
     background-color: black;
     color: white;
     width: 2em;
@@ -317,6 +327,7 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 .botonChanEspacio {
@@ -341,7 +352,7 @@ body {
     box-sizing: content-box;
 }
 
-.botonVolMas {
+.botonVol {
     background-color: black;
     color: white;
     width: 2em;
@@ -350,6 +361,7 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    cursor: pointer;
 }
 
 .botonVolEspacio {
@@ -503,13 +515,13 @@ body {
 .botonesRectangulo {
     background-color: rgb(0, 0, 0);
     color: white;
-    font-size: x-small;
     width: 5em;
     height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    font-size: x-small;
 
 }
 
@@ -528,10 +540,12 @@ body {
 }
 
 .canalP {
-    background-color: rgb(28, 28, 28);
+    transition: 3s;
+    background-color: rgb(60, 60, 60);
 }
 
 .basicScreen {
+    transition: 3s;
     background-color: black;
 }
 
@@ -564,7 +578,7 @@ body {
 }
 
 .canal1 {
-    background-color: rgb(119, 119, 60);
+    background-image: url(../img/canal1.png);
 }
 
 .canal2 {
@@ -572,7 +586,7 @@ body {
 }
 
 .canal3 {
-    background-color: rgb(239, 243, 234);
+    background-color: rgb(87, 110, 58);
 }
 
 .canal4 {
