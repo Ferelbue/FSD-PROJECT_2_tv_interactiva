@@ -49,7 +49,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
 }
 
 #hora {
@@ -100,10 +99,10 @@ body {
 .scrennUpLeft {
     max-width: 100%;
     max-height: 100%;
-    width: 55em;
+    width: 40em;
     height: 4em;
     display: flex;
-    justify-content:left;
+    justify-content: left;
     align-items: center;
     box-sizing: content-box;
     margin-left: 1em;
@@ -113,7 +112,7 @@ body {
 .scrennUpCenterLeft {
     max-width: 100%;
     max-height: 100%;
-    width: 5em;
+    width: 10em;
     height: 4em;
     display: flex;
     justify-content: center;
@@ -125,7 +124,7 @@ body {
 .scrennUpCenterRight {
     max-width: 100%;
     max-height: 100%;
-    width: 5em;
+    width: 10em;
     height: 4em;
     display: flex;
     justify-content: center;
@@ -138,7 +137,7 @@ body {
 .scrennUpRight {
     max-width: 100%;
     max-height: 100%;
-    width: 5em;
+    width: 10em;
     height: 4em;
     display: flex;
     justify-content: center;
@@ -583,6 +582,7 @@ body {
 .canalS1 {
     background-color: rgb(0, 4, 128);
 }
+
 .canalS2 {
     background-color: rgb(32, 128, 0);
 }
@@ -615,7 +615,7 @@ body {
 .canal1 {
     max-width: 100%;
     max-height: 100%;
-    background-image: url(../img/canal1.png);
+    background: rgb(225, 8, 225);
 }
 
 .canal2 {
