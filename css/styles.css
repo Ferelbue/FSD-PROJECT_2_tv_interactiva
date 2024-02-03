@@ -7,339 +7,517 @@ body {
     align-items: center;
     box-sizing: content-box;
 }
+
 .altura {
     height: 100vh;
 }
-.dosJuntos{
+
+.dosJuntos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
+
 .colc {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.tvDiseno{
-    width: 70vw;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.tvColor{
-    background-color: black;
-}
-.mandoDiseno{
-    background-color: grey;
-    width: 15vw;
-    height: 60vh;
+
+.pantalla {
+    width: 60em;
+    height: 30em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    background-color: aqua;
+}
+
+.tvDiseno {
+    width: 60em;
+    height: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     
 }
-.mandoUp{
-    width: 15vw;
-    height: 7.5vh;
+
+#hora {
+    color: white;
+    font-size: medium;
+}
+
+#date {
+    color: white;
+    font-size: medium;
+
+}
+@keyframes hideMe {
+    0% {
+        opacity: 1;
+    }
+
+    99.99% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.tvDisenoUp {
+    width: 60em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+
+}
+
+.tvDisenoDown {
+    width: 60em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.scrennUpLeft {
+    width: 30em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.scrennUpCenterLeft {
+    width: 10em;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 
 }
-.mandoMidUp{
-    width: 15vw;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.mandoMidDown{
-    width: 15vw;
-    height: 7.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.mandoDown{
-    width: 15vw;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonPower{
-    width: 7.5vw;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonSrc{
-    width: 7.5vw;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.espaciadorUp{
-    width: 7.5vw;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonesVol{
-    width: 5vw;
-    height: 15vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonesMidUpColocador{
-    width: 10vw;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonesChan{
-    width: 5vw;
-    height: 15vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonesUp{
-    background-color:black;
-    color: white;
-    border-radius: 10em;
-    width: 3vw;
-    height: 6.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonChanMas{
-    background-color:black;
-    color: white;
-    width: 3vw;
-    height: 4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonChanEspacio{
 
-    color: white;
-    margin: 0.5em;
-    width: 3vw;
-    height: 3vh;
+.scrennUpCenterRight {
+    width: 10em;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-}
-.botonChanMenos{
-    background-color:black;
-    color: white;
-    width: 3vw;
-    height: 4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonVolMas{
-    background-color:black;
-    color: white;
-    width: 3vw;
-    height: 4vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonVolEspacio{
 
+}
+
+.scrennUpRight {
+    width: 10em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: rgb(107, 24, 78);
+}
+
+.scrennDownLeft {
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: rgb(0, 0, 0);
+}
+
+.scrennDownCenter {
+    width: 52em;
+    height: 4em;
     color: white;
-    margin: 0.5em;
-    width: 3vw;
-    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: rgb(0, 0, 0);
+}
+
+.scrennDownRight {
+    width: 4em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: rgb(0, 0, 0);
+} 
+
+.ledEstadoOff {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 3em;
+    background-color: rgb(255, 0, 0);
+}
+
+.ledEstadoOn {
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 3em;
+    background-color: rgb(3, 255, 66);
+
+}
+
+.tvColor {
+    background-color: black;
+}
+
+.mandoDiseno {
+    background-color: grey;
+    width: 10em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+.mandoUp {
+    width: 10em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+.mandoMidUp {
+    width: 10em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+.mandoMidDown {
+    width: 10em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+.mandoDown {
+    width: 10em;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
+.botonPower {
+    width: 3.3em;
+    height: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
-.botonVolMenos{
-    background-color:black;
-    color: white;
-    width: 3vw;
-    height: 4vh;
+
+.botonSrc {
+    width: 3.3em;
+    height: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
-.botonLive{
-    width: 7.5vw;
-    height: 7.5vh;
+
+.espaciadorUp {
+    width: 3.3em;
+    height: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
-.botonSmart{
-    width: 7.5vw;
-    height: 7.5vh;
+
+.botonesVol {
+    width: 3.3em;
+    height: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonesMidUpColocador {
+    width: 3.3em;
+    height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
-.botonesNumUp{
-    width: 15vw;
-    height: 10vh;
+
+.botonesChan {
+    width: 3.3em;
+    height: 5em;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: content-box;
 }
-.botonesNumMid{
-    width: 15vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonesNumDown{
-    width: 15vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum1{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum2{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum3{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum4{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum5{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum6{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum7{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum8{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-.botonNum9{
-    width: 5vw;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
-/* .botonesCanales{
+
+.botonesUp {
     background-color: black;
     color: white;
-    width: 3vw;
-    height: 7vh;
-    border-radius: 10em;
+    border-radius: 1em;
+    width: 2em;
+    height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-} */
-.botonesRectangulo{
+    background-color: aqua;
+}
+
+.botonChanMas {
     background-color: black;
     color: white;
-    font-size: small;
-    width: 6vw;
-    height: 5vh;
+    width: 2em;
+    height: 1.8em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
 }
+
+.botonChanEspacio {
+
+    color: white;
+    width: 2em;
+    height: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonChanMenos {
+    background-color: black;
+    color: white;
+    width: 2em;
+    height: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonVolMas {
+    background-color: black;
+    color: white;
+    width: 2em;
+    height: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonVolEspacio {
+
+    color: white;
+    width: 2em;
+    height: 1.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonVolMenos {
+    background-color: black;
+    color: white;
+    width: 2em;
+    height: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonLive {
+    width: 5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonSmart {
+    width: 5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonesNumUp {
+    width: 10em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonesNumMid {
+    width: 10em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonesNumDown {
+    width: 10em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum1 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum2 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum3 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum4 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum5 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum6 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum7 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum8 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonNum9 {
+    width: 3.3em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+.botonesRectangulo {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: x-small;
+    width: 5em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+
+}
+
 .button {
     background-color: black;
     color: white;
-    width: 3vw;
-    height: 7vh;
+    width: 2em;
+    height: 2em;
     border-radius: 10em;
     display: flex;
     justify-content: center;
@@ -348,9 +526,11 @@ body {
     cursor: pointer;
     transition: 0.2s;
 }
+
 .canalP {
     background-color: rgb(28, 28, 28);
 }
+
 .basicScreen {
     background-color: black;
 }
@@ -366,6 +546,7 @@ body {
 .canal- {
     background-color: gold;
 }
+
 .canalU {
     background-color: rgb(26, 171, 159);
 }
@@ -381,9 +562,11 @@ body {
 .canalR {
     background-color: rgb(101, 87, 4);
 }
+
 .canal1 {
     background-color: rgb(119, 119, 60);
 }
+
 .canal2 {
     background-color: rgb(79, 47, 79);
 }
@@ -391,21 +574,27 @@ body {
 .canal3 {
     background-color: rgb(239, 243, 234);
 }
+
 .canal4 {
     background-color: rgb(29, 146, 66);
 }
+
 .canal5 {
     background-color: rgb(50, 81, 108);
 }
+
 .canal6 {
     background-color: rgb(241, 14, 14);
 }
+
 .canal7 {
     background-color: rgb(8, 239, 31);
 }
+
 .canal8 {
     background-color: rgb(223, 207, 115);
 }
+
 .canal9 {
     background-color: rgb(19, 122, 160);
 }

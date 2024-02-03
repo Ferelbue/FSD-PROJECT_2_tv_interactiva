@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link href="./css/styles.css" rel="stylesheet" />
@@ -17,10 +19,26 @@
     <div class="">
         <div class="dosJuntos">
             <!-- TV -->
-            <div class="altura colc" style="width: 75vw">
-                <div id="screen" class="tvDiseno tvColor"></div>
+            <div class="altura colc pantalla" style="width: 60em">
+
+                <div id="screen" class="tvDiseno tvColor">
+                    <div class="tvDisenoUp">
+                        <div class="scrennUpLeft"></div>
+                        <div id="hora" class="scrennUpCenterLeft"></div>
+                        <div id="date" class="scrennUpCenterRight"></div>
+                        <div id="canal" class="scrennUpRight"></div>
+                    </div>
 
 
+                </div>
+
+                <div class="tvDisenoDown">
+                    <div class="scrennDownLeft"></div>
+                    <div class="scrennDownCenter">LG</div>
+                    <div class="scrennDownRight">
+                        <div id="ledEstado" class="ledEstadoOff"></div>
+                    </div>
+                </div>
             </div>
 
 
@@ -28,15 +46,15 @@
 
 
             <!-- MANDO -->
-            <div class="altura colc" style="width: 25vw">
+            <div class="altura colc" style="width: 15em">
                 <div id="remote" class="mandoDiseno">
                     <div class="mandoUp">
                         <div class="botonPower">
-                            <div id="btnP" class="botonesUp button">P</div>
+                            <div id="btnP" class="button">P</div>
                         </div>
                         <div class="espaciadorUp"></div>
                         <div class="botonSrc">
-                            <div id="btnS" class="botonesUp">SRC</div>
+                            <div id="btnS" class="button">SRC</div>
                         </div>
                     </div>
                     <div class="mandoMidUp">
