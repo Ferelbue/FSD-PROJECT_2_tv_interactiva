@@ -107,7 +107,7 @@ arrayButtons.map(
           PlayVideo()
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video1.mp4";
+            video.src = "https://127.0.0.1:5500/img/video1.mp4";
             video.load();
             video.play();
           }
@@ -117,7 +117,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video2.mp4";
+            video.src = "https://127.0.0.1:5500/img/video2.mp4";
             video.load();
             video.play();
           }
@@ -127,7 +127,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video3.mp4";
+            video.src = "https://127.0.0.1:5500/img/video3.mp4";
             video.load();
             video.play();
           }
@@ -137,7 +137,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video4.mp4";
+            video.src = "https://127.0.0.1:5500/img/video4.mp4";
             video.load();
             video.play();
           }
@@ -147,7 +147,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video5.mp4";
+            video.src = "https://127.0.0.1:5500/img/video5.mp4";
             video.load();
             video.play();
           }
@@ -157,7 +157,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video6.mp4";
+            video.src = "https://127.0.0.1:5500/img/video6.mp4";
             video.load();
             video.play();
           }
@@ -167,7 +167,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video7.mp4";
+            video.src = "https://127.0.0.1:5500/img/video7.mp4";
             video.load();
             video.play();
           }
@@ -177,7 +177,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video8.mp4";
+            video.src = "https://127.0.0.1:5500/img/video8.mp4";
             video.load();
             video.play();
           }
@@ -187,7 +187,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video9.mp4";
+            video.src = "https://127.0.0.1:5500/img/video9.mp4";
             video.load();
             video.play();
           }
@@ -263,7 +263,7 @@ arrayChanel.map(
           PlayVideo()
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video1.mp4";
+            video.src = "https://127.0.0.1:5500/img/video1.mp4";
             video.load();
             video.play();
           }
@@ -273,7 +273,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video2.mp4";
+            video.src = "https://127.0.0.1:5500/img/video2.mp4";
             video.load();
             video.play();
           }
@@ -283,7 +283,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video3.mp4";
+            video.src = "https://127.0.0.1:5500/img/video3.mp4";
             video.load();
             video.play();
           }
@@ -293,7 +293,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video4.mp4";
+            video.src = "https://127.0.0.1:5500/img/video4.mp4";
             video.load();
             video.play();
           }
@@ -303,7 +303,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video5.mp4";
+            video.src = "https://127.0.0.1:5500/img/video5.mp4";
             video.load();
             video.play();
           }
@@ -313,7 +313,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video6.mp4";
+            video.src = "https://127.0.0.1:5500/img/video6.mp4";
             video.load();
             video.play();
           }
@@ -323,7 +323,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video7.mp4";
+            video.src = "https://127.0.0.1:5500/img/video7.mp4";
             video.load();
             video.play();
           }
@@ -333,7 +333,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video8.mp4";
+            video.src = "https://127.0.0.1:5500/img/video8.mp4";
             video.load();
             video.play();
           }
@@ -343,7 +343,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "http://127.0.0.1:5500/img/video9.mp4";
+            video.src = "https://127.0.0.1:5500/img/video9.mp4";
             video.load();
             video.play();
           }
@@ -367,7 +367,7 @@ arraySource.map(
         PlayVideo();
         function PlayVideo() {
           video.pause();
-          video.src = "http://127.0.0.1:5500/img/videoH1.mp4";
+          video.src = "https://127.0.0.1:5500/img/videoH1.mp4";
           video.load();
           video.play();
         }
@@ -402,7 +402,7 @@ arraySource.map(
         PlayVideo();
         function PlayVideo() {
           video.pause();
-          video.src = "http://127.0.0.1:5500/img/videoH2.mp4";
+          video.src = "https://127.0.0.1:5500/img/videoH2.mp4";
           video.load();
           video.play();
         }
@@ -414,7 +414,7 @@ arraySource.map(
         PlayVideo();
         function PlayVideo() {
           video.pause();
-          video.src = "http://127.0.0.1:5500/img/video1.mp4";
+          video.src = "https://127.0.0.1:5500/img/video1.mp4";
           video.load();
           video.play();
         }
