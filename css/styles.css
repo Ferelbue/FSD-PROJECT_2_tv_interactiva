@@ -5,15 +5,14 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    background-image: linear-gradient(beige, rgb(191, 185, 185), beige);
 }
 
-.altura {
-    max-height: 100%;
-}
+.altura {}
 
 .dosJuntos {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -28,8 +27,8 @@ body {
 }
 
 .pantalla {
-    max-width: 100%;
-    max-height: 100%;
+    width: 70em;
+    height: 40em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,17 +37,48 @@ body {
     background-color: rgb(60, 60, 60);
 }
 
+.tvDiseno {}
 
+#screen {
+    width: 70em;
+    height: 34em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
 
+}
 
-.tvDiseno {
-    max-width: 100%;
-    max-height: 100%;
-    width: 60em;
-    height: 30em;
+.tvDisenoMarkCenterLeft {
+    width: 3em;
+    height: 34em;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: black;
+}
+
+.tvDisenoUp {
+
+    width: 64em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    position: absolute;
+
+}
+
+.tvDisenoMarkCenterRight {
+    width: 3em;
+    height: 34em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: black;
 }
 
 #hora {
@@ -68,50 +98,82 @@ body {
 }
 
 #source {
+
     color: white;
-    font-size: x-large;
+
 }
 
-.tvDisenoUp {
-    max-width: 100%;
-    max-height: 100%;
-    width: 60em;
-    height: 4em;
+.tvDisenoMarkUp {
+    width: 70em;
+    height: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-
-
+    background-color: black;
 }
+
+
 
 .tvDisenoDown {
-    max-width: 100%;
-    max-height: 100%;
-    width: 60em;
+
+    width: 70em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    position: relative;
+
+}
+
+.tvDisenoMarkUpLeft {
+
+    width: 3em;
     height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+    background-color: black;
+}
+
+.tvDisenoMarkUpRight {
+
+    width: 3em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: black;
+
+}
+
+.tvDisenoMarkUpRight {
+
+    width: 3em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    background-color: black;
+
 }
 
 .scrennUpLeft {
-    max-width: 100%;
-    max-height: 100%;
+
     width: 40em;
     height: 4em;
     display: flex;
     justify-content: left;
     align-items: center;
     box-sizing: content-box;
-    margin-left: 1em;
-
 }
 
 .scrennUpCenterLeft {
-    max-width: 100%;
-    max-height: 100%;
+
     width: 10em;
     height: 4em;
     display: flex;
@@ -122,8 +184,7 @@ body {
 }
 
 .scrennUpCenterRight {
-    max-width: 100%;
-    max-height: 100%;
+
     width: 10em;
     height: 4em;
     display: flex;
@@ -131,12 +192,27 @@ body {
     align-items: center;
     box-sizing: content-box;
 
-
 }
 
+.tvReproducir {
+    width: 64em;
+    height: 34em;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    box-sizing: content-box;
+    position: relative;
+}
+
+#myvideo {
+    position: absolute;
+    z-index: -1;
+}
+
+
 .scrennUpRight {
-    max-width: 100%;
-    max-height: 100%;
+
     width: 10em;
     height: 4em;
     display: flex;
@@ -148,40 +224,37 @@ body {
 }
 
 .scrennDownLeft {
-    max-width: 100%;
-    max-height: 100%;
-    width: 4em;
-    height: 4em;
+
+    width: 5em;
+    height: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
 .scrennDownCenter {
-    max-width: 100%;
-    max-height: 100%;
-    width: 52em;
-    height: 4em;
+
+    width: 60em;
+    height: 3em;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
 .scrennDownRight {
-    max-width: 100%;
-    max-height: 100%;
-    width: 4em;
-    height: 4em;
+
+    width: 5em;
+    height: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 
 .ledEstadoOff {
@@ -212,9 +285,9 @@ body {
 }
 
 .mandoDiseno {
-    background-color: grey;
+    background-image: linear-gradient(to right, rgb(75, 75, 76), rgb(39, 39, 38), rgb(76, 74, 74));
     width: 10em;
-    height: 20em;
+    height: 30em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,13 +295,12 @@ body {
     box-sizing: content-box;
     margin-top: 2em;
     margin-left: 5em;
-    border-radius: 1em 1em 2em 2em;
-
+    border-radius: 1em;
 }
 
 .mandoUp {
     width: 10em;
-    height: 2.5em;
+    height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +310,7 @@ body {
 
 .mandoMidUp {
     width: 10em;
-    height: 5em;
+    height: 8em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,7 +320,7 @@ body {
 
 .mandoMidDown {
     width: 10em;
-    height: 2.5em;
+    height: 0em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,7 +330,7 @@ body {
 
 .mandoDown {
     width: 10em;
-    height: 10em;
+    height: 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -316,14 +388,13 @@ body {
 }
 
 .botonesMidUpColocador {
-    font-size: xx-large;
-    font-weight: bold;
     width: 3.3em;
     height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: content-box;
+
 }
 
 .botonesChan {
@@ -446,6 +517,7 @@ body {
 .botonesNumMid {
     width: 10em;
     height: 3.3em;
+    margin: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -613,8 +685,7 @@ body {
 }
 
 .canal1 {
-    max-width: 100%;
-    max-height: 100%;
+
     background: rgb(225, 8, 225);
 }
 
@@ -648,4 +719,55 @@ body {
 
 .canal9 {
     background-color: rgb(19, 122, 160);
+}
+
+
+.pushable {
+    background: hsl(0, 0%, 37%);
+    margin-left: 0.4em;
+    border-radius: 6px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.front {
+    display: block;
+    padding: 1px 1px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: hsl(0, 0%, 9%);
+    color: white;
+    font-size: bold;
+    transform: translateY(-6px);
+}
+
+.pushable:active .front {
+    transform: translateY(-2px);
+}
+
+.pushableP {
+    background: hsl(0, 0%, 37%);
+    margin-left: 0.4em;
+    border-radius: 100px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.frontP {
+    display: block;
+    padding: 1px 1px;
+    border-radius: 100px;
+    font-size: 1.25rem;
+    background: hsl(0, 91%, 50%);
+    color: white;
+    font-size: bold;
+    transform: translateY(-6px);
+}
+
+.pushableP:active .frontP {
+    transform: translateY(-2px);
 }

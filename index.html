@@ -6,37 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">    <link href="./css/styles.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./css/styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- <div class="container-fluid altura">
-        <div class="row h-100">
-            <div class="col-12 col-md-6 col-lg-3 bg-danger">A</div>
-            <div class="col-12 col-md-6 col-lg-3 bg-danger-subtle">B</div>
-            <div class="col-12 col-md-6 col-lg-3 bg-warning">C</div>
-            <div class="col-12 col-md-6 col-lg-3 bg-warning-subtle">D</div>
-        </div>
-    </div> -->
-
-
-
-
 
     <div class="container-fluid">
         <div class="row dosJuntos">
-            <div class="col" style="margin-top: 4em;">
+            <div class="col altura ">
                 <!-- TV -->
-                <div class="altura colc pantalla" style="width: 60em">
-                    <div id="screen" class="tvDiseno tvColor">
-                        <div class="tvDisenoUp">
-                            <div id="source" class="scrennUpLeft"></div>
-                            <div id="hora" class="scrennUpCenterLeft"></div>
-                            <div id="date" class="scrennUpCenterRight"></div>
-                            <div id="canal" class="scrennUpRight"></div>
-                        </div>
-                    </div>
+                <div class="altura colc pantalla">
+                    <div class="tvDisenoMarkUp"></div>
+                    <div id="screen" class="tvColor tvDiseno">
 
+                        <div class="tvDisenoMarkCenterLeft"></div>
+                        <div class="tvReproducir">
+                            <div class="tvDisenoUp">
+                                <div id="source" class="scrennUpLeft"></div>
+                                <div id="hora" class="scrennUpCenterLeft"></div>
+                                <div id="date" class="scrennUpCenterRight"></div>
+                                <div id="canal" class="scrennUpRight"></div>
+                            </div>
+                            <div>
+                                <!-- <video id="myVideo" height="590" width="1025" controls>
+                                    <source src="./img/198488 (540p).mp4" type="video/mp4">
+                                </video> -->
+
+                            </div>
+                        </div>
+                        <div class="tvDisenoMarkCenterRight"></div>
+                    </div>
                     <div class="tvDisenoDown">
                         <div class="scrennDownLeft"></div>
                         <div class="scrennDownCenter">LG</div>
@@ -46,18 +47,22 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col altura">
                 <!-- MANDO -->
-                <div class="altura colc" style="width: 15em">
+                <div class="altura colc">
                     <div id="remote" class="mandoDiseno">
                         <div class="mandoUp">
-                            <div class="botonPower">
-                                <div id="btnP" class="button">P</div>
-                            </div>
+                            <button class="pushableP">
+                                <span id="bt" class="frontP button">
+                                    <img id="btnP" src="./img/logo2.png" alt="Logo" width="30" height="30">
+                                </span>
+                            </button>
                             <div class="espaciadorUp"></div>
-                            <div class="botonSrc">
-                                <div id="btnS" class="buttonSrc">SRC</div>
-                            </div>
+                            <button class="pushable">
+                                <span id="bt" class="front buttonSrc">
+                                    <img id="btnS" src="./img/logo3.png" alt="Logo" width="40" height="40">
+                                </span>
+                            </button>
                         </div>
                         <div class="mandoMidUp">
                             <div class="botonesVol">
@@ -65,7 +70,9 @@
                                 <div class="botonVolEspacio">VOL</div>
                                 <div id="btn-" class="botonVol">-</div>
                             </div>
-                            <div class="botonesMidUpColocador">LG</div>
+                            <div class="botonesMidUpColocador">
+                                <img src="./img/logo.png" alt="Logo LG" width="50" height="50">
+                            </div>
                             <div class="botonesChan">
                                 <div id="btnU" class="botonChan">+</div>
                                 <div class="botonChanEspacio">CHN</div>
@@ -74,46 +81,41 @@
 
                         </div>
                         <div class="mandoMidDown">
-                            <div class="botonLive">
-                                <div id="btnL" class="botonesRectangulo">LIVE TV</div>
-                            </div>
-                            <div class="botonSmart">
-                                <div id="btnR" class="botonesRectangulo">SMART TV</div>
-                            </div>
+
                         </div>
                         <div class="mandoDown">
                             <div class="botonesNumUp">
-                                <div class="botonNum1">
-                                    <div id="btn1" class="button">1</div>
-                                </div>
-                                <div class="botonNum2">
-                                    <div id="btn2" class="button">2</div>
-                                </div>
-                                <div class="botonNum3">
-                                    <div id="btn3" class="button">3</div>
-                                </div>
+                                <button class="pushable">
+                                    <span id="btn1" class="front button">1</span>
+                                </button>
+                                <button class="pushable">
+                                    <span id="btn2" class="front button">2</span>
+                                </button>
+                                <button class="pushable">
+                                    <span id="btn3" class="front button">3</span>
+                                </button>
                             </div>
                             <div class="botonesNumMid">
-                                <div class="botonNum4">
-                                    <div id="btn4" class="button">4</div>
-                                </div>
-                                <div class="botonNum5">
-                                    <div id="btn5" class="button">5</div>
-                                </div>
-                                <div class="botonNum6">
-                                    <div id="btn6" class="button">6</div>
-                                </div>
+                                <button class="pushable">
+                                    <span id="btn4" class="front button">4</span>
+                                </button>
+                                <button class="pushable">
+                                    <span id="btn5" class="front button">5</span>
+                                </button>
+                                <button class="pushable">
+                                    <span id="btn6" class="front button">6</span>
+                                </button>
                             </div>
                             <div class="botonesNumDown">
-                                <div class="botonNum7">
-                                    <div id="btn7" class="button">7</div>
-                                </div>
-                                <div class="botonNum8">
-                                    <div id="btn8" class="button">8</div>
-                                </div>
-                                <div class="botonNum9">
-                                    <div id="btn9" class="button">9</div>
-                                </div>
+                                <button class="pushable">
+                                    <span id="btn7" class="front button">7</span>
+                                </button>
+                                <button class="pushable">
+                                    <span id="btn8" class="front button">8</span>
+                                </button>
+                                <button class="pushable">
+                                    <span id="btn9" class="front button">9</span>
+                                </button>
                             </div>
                         </div>
 

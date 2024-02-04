@@ -57,6 +57,8 @@ arrayButtons.map(
           horaPantalla.innerHTML = "";
           datePantalla.innerHTML = "";
           canalPantalla.innerHTML = "";
+          canalActual = "canalP";
+          sourceSelec = 0;
         }
       }
       //Cambio de canales.(Si la TV está encendida)
@@ -117,7 +119,7 @@ arrayChanel.map(
   item => {
     item.addEventListener("click", (evento) => {
       //Si se acaba de encender la TV la tv espera hasta que pulses un numero o un de los botones de chanel up/down
-      if (canalActual === "canalP") {
+      if ((canalActual === "canalP") && (flagBoton == 1)) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canal9")
         canalActual = "canal9";
@@ -201,7 +203,7 @@ arraySource.map(
     item.addEventListener("click", (evento) => {
       sourceSelec++;
 
-      if (sourceSelec == 1) {
+      if ((sourceSelec == 1) && (flagBoton == 1)) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canalS1")
         canalActual = "canalS1"
@@ -217,7 +219,7 @@ arraySource.map(
             horaPantalla.style.visibility = "hidden";
           }, 3000);
       }
-      if (sourceSelec == 2) {
+      if ((sourceSelec == 2) && (flagBoton == 1))  {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canalS2")
         canalActual = "canalS1"
@@ -233,7 +235,7 @@ arraySource.map(
             horaPantalla.style.visibility = "hidden";
           }, 3000);
         }
-      if (sourceSelec == 3) {
+      if ((sourceSelec == 3) && (flagBoton == 1))  {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canal1");
         canalActual = "canal1";
