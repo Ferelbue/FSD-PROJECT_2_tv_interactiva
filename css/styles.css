@@ -8,8 +8,6 @@ body {
     background-image: linear-gradient(beige, rgb(191, 185, 185), beige);
 }
 
-.altura {}
-
 .dosJuntos {
     width: 100vw;
     height: 100vh;
@@ -32,13 +30,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     box-sizing: content-box;
     background-color: rgb(60, 60, 60);
     border-radius: 2em;
 }
-
-.tvDiseno {}
 
 #screen {
     width: 70em;
@@ -81,7 +77,7 @@ body {
     align-items: center;
     box-sizing: content-box;
     background-color: black;
-    
+
 }
 
 #hora {
@@ -118,8 +114,6 @@ body {
     background-color: black;
     border-radius: 2em 2em 0em 0em;
 }
-
-
 
 .tvDisenoDown {
 
@@ -216,8 +210,6 @@ body {
     z-index: -1;
 }
 
-
-
 .scrennUpRight {
 
     width: 10em;
@@ -239,7 +231,7 @@ body {
     align-items: center;
     box-sizing: content-box;
     background-color: black;
-    border-radius:0em 0em 0em 2em;
+    border-radius: 0em 0em 0em 2em;
 }
 
 .scrennDownCenter {
@@ -263,7 +255,7 @@ body {
     align-items: center;
     box-sizing: content-box;
     background-color: black;
-    border-radius:0em 0em 2em 0em;
+    border-radius: 0em 0em 2em 0em;
 }
 
 .ledEstadoOff {
@@ -780,4 +772,23 @@ body {
 
 .pushableP:active .frontP {
     transform: translateY(-2px);
+}
+
+#volume-bar {
+    margin-right: 5em;
+    width: 1em;
+    height: 20em;
+    border-radius: 1em;
+    background-color: crimson;
+    position: absolute;
+    visibility: hidden;
+}
+
+#volume-level {
+    height: 50%;
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    border-radius: 1em 1em 0em 0em;
+    position: absolute;
+    visibility: hidden;
 }

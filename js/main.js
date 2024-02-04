@@ -22,8 +22,11 @@ let arrayVolumen = Array.from(volumen)
 
 let video = document.getElementById("myVideo")
 let val = 0;
-
-
+let currentVolume = 50;
+let maxVolume = 99;
+let minVolume = 1;
+let volumeBar;
+let volumeLevel;
 
 
 
@@ -66,6 +69,9 @@ arrayButtons.map(
           horaPantalla.innerHTML = "";
           datePantalla.innerHTML = "";
           canalPantalla.innerHTML = "";
+          sourcePantalla.innerHTML = "";
+          volumeBar.style.visibility = "hidden";
+          volumeLevel.style.visibility = "hidden";
           canalActual = "canalP";
           sourceSelec = 0;
           PlayVideo()
@@ -192,7 +198,6 @@ arrayButtons.map(
     })
   }
 )
-
 
 arrayChanel.map(
   item => {
@@ -438,26 +443,27 @@ arraySource.map(
 arrayVolumen.map(
   item => {
     item.addEventListener("click", (evento) => {
+      if (flagBoton == 1) {
+        if ((evento.target.id === "btn+") && (currentVolume > minVolume)) {
+          currentVolume -= 10;
+        }
 
-      console.log(evento.target.id.slice(-1))
-      if(evento.target.id.slice(-1)=="+"){
+        if ((evento.target.id === "btn-") && (currentVolume < maxVolume)) {
+          currentVolume += 10;
+        }
+        volumeLevel = document.getElementById("volume-level");
+        volumeBar = document.getElementById("volume-bar");
 
-        val++;
+        volumeLevel.style.height = currentVolume + '%';
+        volumeBar.style.visibility = "visible";
+        volumeLevel.style.visibility = "visible";
+
+        setTimeout(function () {
+          volumeBar.style.visibility = "hidden";
+          volumeLevel.style.visibility = "hidden";
+        }, 3000);
+
       }
-      if(evento.target.id.slice(-1)=="-"){
-
-        val--;
-      }
-
-      window.SetVolume = function()
-      {
-          var player = document.getElementById('video');
-          console.log('Before: ' + player.volume);
-          player.volume = val / 100;
-          console.log('After: ' + player.volume);
-      }
-
-
     })
   }
 )
