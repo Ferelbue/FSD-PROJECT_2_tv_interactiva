@@ -217,6 +217,7 @@ body {
 }
 
 
+
 .scrennUpRight {
 
     width: 10em;
@@ -442,8 +443,10 @@ body {
 .botonChanEspacio {
 
     color: white;
+    font-weight: bold;
     width: 2em;
     height: 1.4em;
+    margin-bottom: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -646,7 +649,6 @@ body {
     align-items: center;
     box-sizing: content-box;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 .canalP {
@@ -748,7 +750,7 @@ body {
     background: hsl(0, 0%, 9%);
     color: white;
     font-size: bold;
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
 .pushable:active .front {

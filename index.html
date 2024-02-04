@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TV INTERACTIVA</title>
+    <link rel="shortcut icon" href="./img/logobarra.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -31,7 +32,7 @@
                             </div>
                             <div>
                                 <video id="myVideo" height="590" width="1025" src="" type="video/mp4">
-                                    <!-- <source src="./img/198488 (540p).mp4" type="video/mp4"> -->
+
                                 </video>
 
                             </div>
@@ -66,17 +67,25 @@
                         </div>
                         <div class="mandoMidUp">
                             <div class="botonesVol">
-                                <div id="btn+" class="botonVol">+</div>
-                                <div class="botonVolEspacio">VOL</div>
-                                <div id="btn-" class="botonVol">-</div>
+                                <button class="pushable">
+                                    <span id="btn+" class="front botonVol">+</span>
+                                </button>
+                                <div class="botonChanEspacio">VOL</div>
+                                <button class="pushable">
+                                    <span id="btn-" class="front botonVol">-</span>
+                                </button>
                             </div>
                             <div class="botonesMidUpColocador">
                                 <img src="./img/logo.png" alt="Logo LG" width="50" height="50">
                             </div>
                             <div class="botonesChan">
-                                <div id="btnU" class="botonChan">+</div>
+                                <button class="pushable">
+                                    <span id="btnU" class="front botonChan">+</span>
+                                </button>
                                 <div class="botonChanEspacio">CHN</div>
-                                <div id="btnD" class="botonChan">-</div>
+                                <button class="pushable">
+                                    <span id="btnD" class="front botonChan">-</span>
+                                </button>
                             </div>
 
                         </div>
@@ -127,6 +136,11 @@
     </div>
 
 
+
+<!-- 
+
+    <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(5)" onchange="SetVolume(100)"></input>
+ -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
