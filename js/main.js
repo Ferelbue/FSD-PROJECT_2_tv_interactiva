@@ -18,6 +18,14 @@ const source = document.getElementsByClassName("buttonSrc")
 let arraySource = Array.from(source)
 let sourceSelec = 0;
 
+
+let video = document.getElementById("myVideo")
+
+
+
+
+
+
 //CAMBIO DE CANALES. Recorrremos la array de tods los elementos que contengan la clase boutton al hacer click en uno de ellos
 arrayButtons.map(
   item => {
@@ -59,6 +67,13 @@ arrayButtons.map(
           canalPantalla.innerHTML = "";
           canalActual = "canalP";
           sourceSelec = 0;
+          PlayVideo()
+          function PlayVideo(){
+            video.pause();
+            video.src = "";
+            video.load();
+            video.play();
+          }
         }
       }
       //Cambio de canales.(Si la TV está encendida)
@@ -82,30 +97,93 @@ arrayButtons.map(
 
         if (("canal" + evento.target.id.slice(-1)) === "canal1") {
           canalPantalla.innerHTML = "TVE"
+          PlayVideo()
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video1.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal2") {
           canalPantalla.innerHTML = "LA 2"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video2.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal3") {
           canalPantalla.innerHTML = "ANTENA 3"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video3.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal4") {
           canalPantalla.innerHTML = "QUATRO"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video4.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal5") {
           canalPantalla.innerHTML = "TELECINCO"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video5.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal6") {
           canalPantalla.innerHTML = "LA SEXTA"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video6.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal7") {
           canalPantalla.innerHTML = "TDP"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video7.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal8") {
           canalPantalla.innerHTML = "DISNEY"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video8.mp4";
+            video.load();
+            video.play();
+          }
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal9") {
           canalPantalla.innerHTML = "CANAL NOU"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video9.mp4";
+            video.load();
+            video.play();
+          }
         }
       }
       canalActual = ("canal" + evento.target.id.slice(-1));
@@ -119,6 +197,7 @@ arrayChanel.map(
   item => {
     item.addEventListener("click", (evento) => {
       //Si se acaba de encender la TV la tv espera hasta que pulses un numero o un de los botones de chanel up/down
+      console.log(evento.target.id.slice(-1))
       if ((canalActual === "canalP") && (flagBoton == 1)) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canal9")
@@ -151,6 +230,7 @@ arrayChanel.map(
         screen.classList.add(nuevoCanalReal)
         canalActual = nuevoCanalReal;
       }
+
       if ((flagBoton == 1) && (sourceSelec == 0)) {
         //Fecha y hora en la pantalla
         horaPantalla.innerHTML = now.toLocaleTimeString();
@@ -162,35 +242,100 @@ arrayChanel.map(
           horaPantalla.style.visibility = "hidden";
           datePantalla.style.visibility = "hidden";
         }, 3000);
+        
       }
+
       //Nombre de canal en pantalla
       if ((flagBoton == 1) && (sourceSelec == 0)) {
-        if (nuevoCanalReal === "canal1") {
+        if (canalActual=="canal1") {
           canalPantalla.innerHTML = "TVE"
+          PlayVideo()
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video1.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal2") {
+        if (canalActual=="canal2") {
           canalPantalla.innerHTML = "LA 2"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video2.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal3") {
+        if (canalActual=="canal3") {
           canalPantalla.innerHTML = "ANTENA 3"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video3.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal4") {
+        if (canalActual=="canal4") {
           canalPantalla.innerHTML = "QUATRO"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video4.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal5") {
+        if (canalActual=="canal5") {
           canalPantalla.innerHTML = "TELECINCO"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video5.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal6") {
+        if (canalActual=="canal6") {
           canalPantalla.innerHTML = "LA SEXTA"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video6.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal7") {
+        if (canalActual=="canal7") {
           canalPantalla.innerHTML = "TDP"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video7.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal8") {
+        if (canalActual=="canal8") {
           canalPantalla.innerHTML = "DISNEY"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video8.mp4";
+            video.load();
+            video.play();
+          }
         }
-        if (nuevoCanalReal === "canal9") {
+        if (canalActual=="canal9") {
           canalPantalla.innerHTML = "CANAL NOU"
+          PlayVideo();
+          function PlayVideo(){
+            video.pause();
+            video.src = "http://127.0.0.1:5500/img/video9.mp4";
+            video.load();
+            video.play();
+          }
         }
       }
 
@@ -204,9 +349,13 @@ arraySource.map(
       sourceSelec++;
 
       if ((sourceSelec == 1) && (flagBoton == 1)) {
-        screen.classList.remove(screen.classList[screen.classList.length - 1])
-        screen.classList.add("canalS1")
-        canalActual = "canalS1"
+        PlayVideo();
+        function PlayVideo(){
+          video.pause();
+          video.src = "http://127.0.0.1:5500/img/videoH1.mp4";
+          video.load();
+          video.play();
+        }
         canalPantalla.innerHTML = ""
         sourcePantalla.innerHTML = "HDMI-1";
         sourcePantalla.style.visibility = "visible";
@@ -220,9 +369,7 @@ arraySource.map(
           }, 3000);
       }
       if ((sourceSelec == 2) && (flagBoton == 1))  {
-        screen.classList.remove(screen.classList[screen.classList.length - 1])
-        screen.classList.add("canalS2")
-        canalActual = "canalS1"
+
         sourcePantalla.innerHTML = "HDMI-2";
         canalPantalla.innerHTML = ""
         sourcePantalla.style.visibility = "visible";
@@ -235,9 +382,21 @@ arraySource.map(
             horaPantalla.style.visibility = "hidden";
           }, 3000);
         }
+        PlayVideo();
+        function PlayVideo(){
+          video.pause();
+          video.src = "http://127.0.0.1:5500/img/videoH2.mp4";
+          video.load();
+          video.play();
+        }
       if ((sourceSelec == 3) && (flagBoton == 1))  {
-        screen.classList.remove(screen.classList[screen.classList.length - 1])
-        screen.classList.add("canal1");
+        PlayVideo();
+        function PlayVideo(){
+          video.pause();
+          video.src = "http://127.0.0.1:5500/img/video1.mp4";
+          video.load();
+          video.play();
+        }
         canalActual = "canal1";
         canalPantalla.innerHTML = "TVE"
         sourcePantalla.innerHTML = "LIVE TV";
