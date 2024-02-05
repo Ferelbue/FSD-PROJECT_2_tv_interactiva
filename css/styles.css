@@ -374,9 +374,24 @@ body {
     height: 2.5em;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     box-sizing: content-box;
 }
+
+.ledMando{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 1em;
+    background-color: dimgrey;
+}
+.ledOn{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 1em;
+
+    background-color: greenyellow;
+}
+
 
 .botonesVol {
     width: 3.3em;

@@ -14,6 +14,12 @@ let canalActual;
 let nuevoCanal;
 let nuevoCanalReal;
 
+const led = document.getElementsByClassName("led")
+let arrayLed = Array.from(led)
+let ledRemote = document.getElementById("ledRemote")
+
+
+
 const source = document.getElementsByClassName("buttonSrc")
 let arraySource = Array.from(source)
 let sourceSelec = 0;
@@ -461,6 +467,22 @@ arrayVolumen.map(
         }, 3000);
 
       }
+    })
+  }
+)
+
+arrayLed.map(
+  item => {
+    item.addEventListener("click", (evento) => {
+    console.log(ledRemote.classList)
+      ledRemote.classList.remove(ledRemote.classList[ledRemote.classList.length - 1])
+      ledRemote.classList.add("ledOn")
+      setTimeout(function () {
+        ledRemote.classList.remove(ledRemote.classList[ledRemote.classList.length - 1])
+        ledRemote.classList.add("ledMando")
+      }, 200);
+    
+
     })
   }
 )
