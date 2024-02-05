@@ -21,12 +21,12 @@ const volumen = document.getElementsByClassName("botonVol")
 let arrayVolumen = Array.from(volumen)
 
 let video = document.getElementById("myVideo")
+let volumeLevel = document.getElementById("volume-level");
+let volumeBar = document.getElementById("volume-bar");
 let val = 0;
 let currentVolume = 50;
 let maxVolume = 99;
 let minVolume = 1;
-let volumeBar;
-let volumeLevel;
 
 
 
@@ -78,8 +78,6 @@ arrayButtons.map(
           function PlayVideo() {
             video.pause();
             video.src = "";
-            video.load();
-            video.play();
           }
         }
       }
@@ -107,7 +105,7 @@ arrayButtons.map(
           PlayVideo()
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video1.mp4";
+            video.src = "./img/video1.mp4";
             video.load();
             video.play();
           }
@@ -117,7 +115,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video2.mp4";
+            video.src = "./img/video2.mp4";
             video.load();
             video.play();
           }
@@ -127,7 +125,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video3.mp4";
+            video.src = "./img/video3.mp4";
             video.load();
             video.play();
           }
@@ -137,7 +135,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video4.mp4";
+            video.src = "./img/video4.mp4";
             video.load();
             video.play();
           }
@@ -147,7 +145,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video5.mp4";
+            video.src = "./img/video5.mp4";
             video.load();
             video.play();
           }
@@ -157,7 +155,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video6.mp4";
+            video.src = "./img/video6.mp4";
             video.load();
             video.play();
           }
@@ -167,7 +165,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video7.mp4";
+            video.src = "./img/video7.mp4";
             video.load();
             video.play();
           }
@@ -177,7 +175,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video8.mp4";
+            video.src = "./img/video8.mp4";
             video.load();
             video.play();
           }
@@ -187,7 +185,7 @@ arrayButtons.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video9.mp4";
+            video.src = "./img/video9.mp4";
             video.load();
             video.play();
           }
@@ -263,7 +261,7 @@ arrayChanel.map(
           PlayVideo()
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video1.mp4";
+            video.src = "./img/video1.mp4";
             video.load();
             video.play();
           }
@@ -273,7 +271,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video2.mp4";
+            video.src = "./img/video2.mp4";
             video.load();
             video.play();
           }
@@ -283,7 +281,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video3.mp4";
+            video.src = "./img/video3.mp4";
             video.load();
             video.play();
           }
@@ -293,7 +291,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video4.mp4";
+            video.src = "./img/video4.mp4";
             video.load();
             video.play();
           }
@@ -303,7 +301,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video5.mp4";
+            video.src = "./img/video5.mp4";
             video.load();
             video.play();
           }
@@ -313,7 +311,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video6.mp4";
+            video.src = "./img/video6.mp4";
             video.load();
             video.play();
           }
@@ -323,7 +321,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video7.mp4";
+            video.src = "./img/video7.mp4";
             video.load();
             video.play();
           }
@@ -333,7 +331,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video8.mp4";
+            video.src = "./img/video8.mp4";
             video.load();
             video.play();
           }
@@ -343,7 +341,7 @@ arrayChanel.map(
           PlayVideo();
           function PlayVideo() {
             video.pause();
-            video.src = "https://127.0.0.1:5500/img/video9.mp4";
+            video.src = "./img/video9.mp4";
             video.load();
             video.play();
           }
@@ -367,7 +365,7 @@ arraySource.map(
         PlayVideo();
         function PlayVideo() {
           video.pause();
-          video.src = "https://127.0.0.1:5500/img/videoH1.mp4";
+          video.src = "./img/videoH1.mp4";
           video.load();
           video.play();
         }
@@ -402,7 +400,7 @@ arraySource.map(
         PlayVideo();
         function PlayVideo() {
           video.pause();
-          video.src = "https://127.0.0.1:5500/img/videoH2.mp4";
+          video.src = "./img/videoH2.mp4";
           video.load();
           video.play();
         }
@@ -414,7 +412,7 @@ arraySource.map(
         PlayVideo();
         function PlayVideo() {
           video.pause();
-          video.src = "https://127.0.0.1:5500/img/video1.mp4";
+          video.src = "./img/video1.mp4";
           video.load();
           video.play();
         }
@@ -451,8 +449,7 @@ arrayVolumen.map(
         if ((evento.target.id === "btn-") && (currentVolume < maxVolume)) {
           currentVolume += 10;
         }
-        volumeLevel = document.getElementById("volume-level");
-        volumeBar = document.getElementById("volume-bar");
+
 
         volumeLevel.style.height = currentVolume + '%';
         volumeBar.style.visibility = "visible";
