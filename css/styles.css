@@ -504,14 +504,6 @@ body {
     box-sizing: content-box;
 }
 
-.botonLive {
-    width: 5em;
-    height: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: content-box;
-}
 
 .botonSmart {
     width: 5em;
@@ -793,16 +785,25 @@ body {
     width: 1em;
     height: 20em;
     border-radius: 1em;
-    background-color: crimson;
+    background-color:floralwhite;
     position: absolute;
     visibility: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+
 }
 
 #volume-level {
     height: 50%;
-    background-color: rgb(252, 252, 252);
+    background-color:crimson;
     width: 100%;
-    border-radius: 1em 1em 0em 0em;
+    border-radius: 0em 0em 1em 1em;
     position: absolute;
+    visibility: hidden;
+}
+#logoMute{
+    margin-right: 7em;
+    position: absolute;
+    color:white;
     visibility: hidden;
 }

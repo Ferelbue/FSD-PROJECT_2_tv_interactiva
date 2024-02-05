@@ -17,8 +17,9 @@ let nuevoCanalReal;
 const led = document.getElementsByClassName("led")
 let arrayLed = Array.from(led)
 let ledRemote = document.getElementById("ledRemote")
-
-
+let mute = document.getElementsByClassName("botonMute")
+let arrayMute = Array.from(mute)
+let logoMute = document.getElementById("logoMute")
 
 const source = document.getElementsByClassName("buttonSrc")
 let arraySource = Array.from(source)
@@ -31,8 +32,9 @@ let volumeLevel = document.getElementById("volume-level");
 let volumeBar = document.getElementById("volume-bar");
 let val = 0;
 let currentVolume = 50;
-let maxVolume = 99;
-let minVolume = 1;
+let maxVolume = 100;
+let minVolume = 0;
+let muteOn = 0;
 
 
 
@@ -61,6 +63,14 @@ arrayButtons.map(
           ledEstado.classList.remove(ledEstado.classList)
           ledEstado.classList.add("ledEstadoOn")
 
+          setTimeout(function () {
+            video.pause();
+            video.src = "./img/videop.mp4";
+            video.load();
+            video.play();
+          }, 1200);
+
+
           //Segundo si esta encendido
         } else {
           //bandera encendido
@@ -80,11 +90,10 @@ arrayButtons.map(
           volumeLevel.style.visibility = "hidden";
           canalActual = "canalP";
           sourceSelec = 0;
-          PlayVideo()
-          function PlayVideo() {
+
             video.pause();
             video.src = "";
-          }
+          
         }
       }
       //Cambio de canales.(Si la TV está encendida)
@@ -108,93 +117,75 @@ arrayButtons.map(
 
         if (("canal" + evento.target.id.slice(-1)) === "canal1") {
           canalPantalla.innerHTML = "TVE"
-          PlayVideo()
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video1.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video1.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal2") {
           canalPantalla.innerHTML = "LA 2"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video2.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video2.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal3") {
           canalPantalla.innerHTML = "ANTENA 3"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video3.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video3.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal4") {
           canalPantalla.innerHTML = "QUATRO"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video4.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video4.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal5") {
           canalPantalla.innerHTML = "TELECINCO"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video5.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video5.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal6") {
           canalPantalla.innerHTML = "LA SEXTA"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video6.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video6.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal7") {
           canalPantalla.innerHTML = "TDP"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video7.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video7.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal8") {
           canalPantalla.innerHTML = "DISNEY"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video8.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video8.mp4";
+          video.load();
+          video.play();
         }
         if (("canal" + evento.target.id.slice(-1)) === "canal9") {
           canalPantalla.innerHTML = "CANAL NOU"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video9.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video9.mp4";
+          video.load();
+          video.play();
         }
       }
       canalActual = ("canal" + evento.target.id.slice(-1));
@@ -203,6 +194,7 @@ arrayButtons.map(
   }
 )
 
+//FUNCIONALIDAD BOTON CHANEL UP/DOWN
 arrayChanel.map(
   item => {
     item.addEventListener("click", (evento) => {
@@ -260,168 +252,152 @@ arrayChanel.map(
 
       }
 
-      //Nombre de canal en pantalla
+      //Nombre de canal en pantalla y reproduccion de video
       if ((flagBoton == 1) && (sourceSelec == 0)) {
         if (canalActual == "canal1") {
           canalPantalla.innerHTML = "TVE"
-          PlayVideo()
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video1.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video1.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal2") {
           canalPantalla.innerHTML = "LA 2"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video2.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video2.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal3") {
           canalPantalla.innerHTML = "ANTENA 3"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video3.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video3.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal4") {
           canalPantalla.innerHTML = "QUATRO"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video4.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video4.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal5") {
           canalPantalla.innerHTML = "TELECINCO"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video5.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video5.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal6") {
           canalPantalla.innerHTML = "LA SEXTA"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video6.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video6.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal7") {
           canalPantalla.innerHTML = "TDP"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video7.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video7.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal8") {
           canalPantalla.innerHTML = "DISNEY"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video8.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video8.mp4";
+          video.load();
+          video.play();
         }
         if (canalActual == "canal9") {
           canalPantalla.innerHTML = "CANAL NOU"
-          PlayVideo();
-          function PlayVideo() {
-            video.pause();
-            video.src = "./img/video9.mp4";
-            video.load();
-            video.play();
-          }
+
+          video.pause();
+          video.src = "./img/video9.mp4";
+          video.load();
+          video.play();
         }
       }
-
     })
   }
 )
 
+//FUNCIOALIDAD BOTON SOURCE
 arraySource.map(
   item => {
     item.addEventListener("click", (evento) => {
-
+      //Variable de control de boton
       sourceSelec++;
-
+      //Primer canal de source HDMI1
       if ((sourceSelec == 1) && (flagBoton == 1)) {
+        //Cambio la clase del fondo
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canalS1")
         canalActual = "canalS1"
-        PlayVideo();
-        function PlayVideo() {
-          video.pause();
-          video.src = "./img/videoH1.mp4";
-          video.load();
-          video.play();
-        }
+
+        //Visibilidad info pantalla
         canalPantalla.innerHTML = ""
         sourcePantalla.innerHTML = "HDMI-1";
         sourcePantalla.style.visibility = "visible";
         datePantalla.style.visibility = "visible";
         horaPantalla.style.visibility = "visible";
+
         //Fecha y hora permanecen durante 3 segundos
         setTimeout(function () {
           sourcePantalla.style.visibility = "hidden";
           datePantalla.style.visibility = "hidden";
           horaPantalla.style.visibility = "hidden";
         }, 3000);
+
+        //Activo la reproduccion del video
+        video.pause();
+        video.src = "./img/videoH1.mp4";
+        video.load();
+        video.play();
       }
+
+      //Segundo canal de source HDMI2
       if ((sourceSelec == 2) && (flagBoton == 1)) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canalS2")
         canalActual = "canalS2"
+
 
         sourcePantalla.innerHTML = "HDMI-2";
         canalPantalla.innerHTML = ""
         sourcePantalla.style.visibility = "visible";
         datePantalla.style.visibility = "visible";
         horaPantalla.style.visibility = "visible";
+
         //Fecha y hora permanecen durante 3 segundos
         setTimeout(function () {
           sourcePantalla.style.visibility = "hidden";
           datePantalla.style.visibility = "hidden";
           horaPantalla.style.visibility = "hidden";
         }, 3000);
-        PlayVideo();
-        function PlayVideo() {
-          video.pause();
-          video.src = "./img/videoH2.mp4";
-          video.load();
-          video.play();
-        }
-      }
 
+        //Activo la reproduccion del video
+        video.pause();
+        video.src = "./img/videoH2.mp4";
+        video.load();
+        video.play();
+
+      }
+      //Primer canal de source LIVE TV
       if ((sourceSelec == 3) && (flagBoton == 1)) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canal1");
-        PlayVideo();
-        function PlayVideo() {
-          video.pause();
-          video.src = "./img/video1.mp4";
-          video.load();
-          video.play();
-        }
+
+        //Visibilidad info pantalla
         canalActual = "canal1";
         canalPantalla.innerHTML = "TVE"
         sourcePantalla.innerHTML = "LIVE TV";
@@ -435,54 +411,74 @@ arraySource.map(
           datePantalla.style.visibility = "hidden";
           horaPantalla.style.visibility = "hidden";
         }, 3000);
+        //Activo la reproduccion del video
+        video.pause();
+        video.src = "./img/video1.mp4";
+        video.load();
+        video.play();
       }
     })
   }
 )
 
-
-
-
-
+//CONTROL DE VOLUMEN
 arrayVolumen.map(
   item => {
     item.addEventListener("click", (evento) => {
+      //Condicion de estar la TV encendida
+      logoMute.style.visibility = "hidden";
       if (flagBoton == 1) {
-        if ((evento.target.id === "btn+") && (currentVolume > minVolume)) {
-          currentVolume -= 10;
-        }
-
-        if ((evento.target.id === "btn-") && (currentVolume < maxVolume)) {
+        if ((evento.target.id === "btn+") && (currentVolume < maxVolume)) {
           currentVolume += 10;
         }
-
-
+        if ((evento.target.id === "btn-") && (currentVolume > minVolume)) {
+          currentVolume -= 10;
+        }
+        //Sumo valor a la variable
+        let volumenVideo = currentVolume/100;
         volumeLevel.style.height = currentVolume + '%';
+        //Le doy visibilidad a la barra y desaparece a los 3 segudnos
         volumeBar.style.visibility = "visible";
         volumeLevel.style.visibility = "visible";
-
         setTimeout(function () {
           volumeBar.style.visibility = "hidden";
           volumeLevel.style.visibility = "hidden";
-        }, 3000);
-
+        }, 4000);
+        video.volume = volumenVideo;
       }
     })
   }
 )
 
+//BOTON MUTE
+arrayMute.map(
+  item => {
+    item.addEventListener("click", (evento) => {
+      console.log(muteOn)
+      if(muteOn==0){
+      video.volume = 0;
+      logoMute.style.visibility = "visible";
+      muteOn++;
+      }
+      else{
+      video.volume = currentVolume/100;
+      logoMute.style.visibility = "hidden";
+      muteOn = 0;
+      }
+    })
+  }
+)
+
+//FUNCIONALIDAD LED MANDO
 arrayLed.map(
   item => {
     item.addEventListener("click", (evento) => {
-    console.log(ledRemote.classList)
       ledRemote.classList.remove(ledRemote.classList[ledRemote.classList.length - 1])
       ledRemote.classList.add("ledOn")
       setTimeout(function () {
         ledRemote.classList.remove(ledRemote.classList[ledRemote.classList.length - 1])
         ledRemote.classList.add("ledMando")
       }, 200);
-    
-
     })
   }
 )
