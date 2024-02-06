@@ -20,6 +20,8 @@ let ledRemote = document.getElementById("ledRemote")
 let mute = document.getElementsByClassName("botonMute")
 let arrayMute = Array.from(mute)
 let logoMute = document.getElementById("logoMute")
+let chanList = document.getElementsByClassName("botonList")
+let arrayList = Array.from(chanList)
 
 const source = document.getElementsByClassName("buttonSrc")
 let arraySource = Array.from(source)
@@ -35,7 +37,7 @@ let currentVolume = 50;
 let maxVolume = 100;
 let minVolume = 0;
 let muteOn = 0;
-
+let chan = 0;
 
 
 //CAMBIO DE CANALES. Recorrremos la array de tods los elementos que contengan la clase boutton al hacer click en uno de ellos
@@ -86,8 +88,10 @@ arrayButtons.map(
           datePantalla.innerHTML = "";
           canalPantalla.innerHTML = "";
           sourcePantalla.innerHTML = "";
+          sourcePantalla.innerHTML = "";
           volumeBar.style.visibility = "hidden";
           volumeLevel.style.visibility = "hidden";
+          logoMute.style.visibility = "hidden";
           canalActual = "canalP";
           sourceSelec = 0;
 
@@ -429,10 +433,10 @@ arrayVolumen.map(
       logoMute.style.visibility = "hidden";
       if (flagBoton == 1) {
         if ((evento.target.id === "btn+") && (currentVolume < maxVolume)) {
-          currentVolume += 10;
+          currentVolume += 1;
         }
         if ((evento.target.id === "btn-") && (currentVolume > minVolume)) {
-          currentVolume -= 10;
+          currentVolume -= 1;
         }
         //Sumo valor a la variable
         let volumenVideo = currentVolume/100;
@@ -454,7 +458,7 @@ arrayVolumen.map(
 arrayMute.map(
   item => {
     item.addEventListener("click", (evento) => {
-      console.log(muteOn)
+      if (flagBoton == 1){
       if(muteOn==0){
       video.volume = 0;
       logoMute.style.visibility = "visible";
@@ -465,9 +469,25 @@ arrayMute.map(
       logoMute.style.visibility = "hidden";
       muteOn = 0;
       }
+    }
     })
   }
 )
+
+//BOTON LISTA CANALES
+arrayList.map(
+  item => {
+    item.addEventListener("click", (evento) => {
+      if (flagBoton == 1){
+      listChan.style.visibility = "visible";
+      setTimeout(function () {
+        listChan.style.visibility = "hidden";
+      }, 5000);
+    }
+    })
+  }
+)
+
 
 //FUNCIONALIDAD LED MANDO
 arrayLed.map(
