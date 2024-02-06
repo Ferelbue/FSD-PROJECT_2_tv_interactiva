@@ -11,6 +11,7 @@ This is the 2th project of the GeeksHub Academy Fullstack Developer Bootcamp, sh
 - [Getting-started 👌](#getting-started-ok_hand)
 - [Launch 🚀](#launch-rocket)
 - [Next versions 🔮](#next-versions-crystal_ball)
+- [Next versions 👽](#known-bugs-alien)
 - [Author ✒️](#author-black_nib)
 - [Acknowledgements 🎓](#acknowledgements-mortar_board)
 ***
@@ -27,6 +28,8 @@ This is the 2th project of the GeeksHub Academy Fullstack Developer Bootcamp, sh
 - **Responisve design:** Adapted to all tipe of screns and devices. 📱💻
 - **Real volume control:** Posibility to up, down and mute the TV sound. 🔉
 - **Hour, date and canal number:** Actual information displayed for a few seconds on the screen. 📆
+- **Information channel list:** List with the channel magazine.❔
+
 
 
 ***
@@ -57,6 +60,11 @@ To launch and enjoy the TV you should follow the following steps:
 The website can be improved in the future:
 - Parental control
 - Real channel list whith posibility to select the chanel
+
+***
+## Known bugs :alien:
+- The screen adapts the size to the mobile and PC sizes. But on a PC, if you makes the screen smaller, the TV keeps the original size.
+
 
 ***
 ## Author :black_nib:

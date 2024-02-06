@@ -493,12 +493,12 @@ arrayMute.map(
 arrayList.map(
   item => {
     item.addEventListener("click", (evento) => {
-      //Condicion de estar la TV encendida. Lo muestro durante 5 segundos
+      //Condicion de estar la TV encendida. Lo muestro durante 4 segundos
       if (flagBoton == 1) {
         listChan.style.visibility = "visible";
         setTimeout(function () {
           listChan.style.visibility = "hidden";
-        }, 5000);
+        }, 4000);
       }
     })
   }
