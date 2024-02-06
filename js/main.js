@@ -1,37 +1,38 @@
 const buttons = document.getElementsByClassName("button")
 let arrayButtons = Array.from(buttons)
-let screen = document.getElementById("screen")
-let ledEstado = document.getElementById("ledEstado")
-let flagBoton = 0;
-let now = new Date();
-let horaPantalla = document.getElementById("hora")
-let datePantalla = document.getElementById("date")
-let canalPantalla = document.getElementById("canal")
-let sourcePantalla = document.getElementById("source")
 const chanel = document.getElementsByClassName("botonChan")
 let arrayChanel = Array.from(chanel)
-let canalActual;
-let nuevoCanal;
-let nuevoCanalReal;
-
-const led = document.getElementsByClassName("led")
-let arrayLed = Array.from(led)
-let ledRemote = document.getElementById("ledRemote")
 let mute = document.getElementsByClassName("botonMute")
 let arrayMute = Array.from(mute)
-let logoMute = document.getElementById("logoMute")
+const led = document.getElementsByClassName("led")
+let arrayLed = Array.from(led)
 let chanList = document.getElementsByClassName("botonList")
 let arrayList = Array.from(chanList)
-
 const source = document.getElementsByClassName("buttonSrc")
 let arraySource = Array.from(source)
-let sourceSelec = 0;
 const volumen = document.getElementsByClassName("botonVol")
 let arrayVolumen = Array.from(volumen)
 
+let screen = document.getElementById("screen")
+let ledEstado = document.getElementById("ledEstado")
+let horaPantalla = document.getElementById("hora")
+let datePantalla = document.getElementById("date")
+let canalPantalla = document.getElementById("canal")
+let volumenPantalla = document.getElementById("numeroVol")
+let sourcePantalla = document.getElementById("source")
+let ledRemote = document.getElementById("ledRemote")
+let logoMute = document.getElementById("logoMute")
 let video = document.getElementById("myVideo")
 let volumeLevel = document.getElementById("volume-level");
 let volumeBar = document.getElementById("volume-bar");
+
+let now = new Date();
+
+let canalActual;
+let nuevoCanal;
+let nuevoCanalReal;
+let sourceSelec = 0;
+let flagBoton = 0;
 let val = 0;
 let currentVolume = 50;
 let maxVolume = 100;
@@ -92,12 +93,12 @@ arrayButtons.map(
           volumeBar.style.visibility = "hidden";
           volumeLevel.style.visibility = "hidden";
           logoMute.style.visibility = "hidden";
+          volumenPantalla.style.visibility = "hidden"
           canalActual = "canalP";
+          listChan.style.visibility = "hidden";
           sourceSelec = 0;
-
-            video.pause();
-            video.src = "";
-          
+          video.pause();
+          video.src = "";
         }
       }
       //Cambio de canales.(Si la TV está encendida)
@@ -116,7 +117,7 @@ arrayButtons.map(
           datePantalla.style.visibility = "hidden";
         }, 3000);
       }
-      //Nombre de canal en pantalla
+      //Nombre de canal en pantalla y envío de ruta y reproduccion de video
       if ((flagBoton == 1) && (sourceSelec == 0)) {
 
         if (("canal" + evento.target.id.slice(-1)) === "canal1") {
@@ -192,6 +193,7 @@ arrayButtons.map(
           video.play();
         }
       }
+      //Actualizo el canal actual
       canalActual = ("canal" + evento.target.id.slice(-1));
 
     })
@@ -202,8 +204,7 @@ arrayButtons.map(
 arrayChanel.map(
   item => {
     item.addEventListener("click", (evento) => {
-      //Si se acaba de encender la TV la tv espera hasta que pulses un numero o un de los botones de chanel up/down
-      console.log(evento.target.id.slice(-1))
+      //Si se acaba de encender la TV espera hasta que pulses un numero o un de los botones de chanel up/down
       if ((canalActual === "canalP") && (flagBoton == 1) && ((evento.target.id) === "btnU")) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
         screen.classList.add("canal9")
@@ -214,6 +215,7 @@ arrayChanel.map(
         screen.classList.add("canal1")
         canalActual = "canal1";
       }
+
       //Boton chanel UP
       if (((evento.target.id) === "btnU") && (flagBoton == 1) && (sourceSelec == 0)) {
         nuevoCanal = (canalActual.slice(-1))
@@ -241,9 +243,8 @@ arrayChanel.map(
         screen.classList.add(nuevoCanalReal)
         canalActual = nuevoCanalReal;
       }
-
+      //Fecha y hora en la pantalla
       if ((flagBoton == 1) && (sourceSelec == 0)) {
-        //Fecha y hora en la pantalla
         horaPantalla.innerHTML = now.toLocaleTimeString();
         datePantalla.innerHTML = now.toLocaleDateString();
         horaPantalla.style.visibility = "visible";
@@ -375,7 +376,7 @@ arraySource.map(
         screen.classList.add("canalS2")
         canalActual = "canalS2"
 
-
+        //Visibilidad info pantalla
         sourcePantalla.innerHTML = "HDMI-2";
         canalPantalla.innerHTML = ""
         sourcePantalla.style.visibility = "visible";
@@ -396,6 +397,7 @@ arraySource.map(
         video.play();
 
       }
+
       //Primer canal de source LIVE TV
       if ((sourceSelec == 3) && (flagBoton == 1)) {
         screen.classList.remove(screen.classList[screen.classList.length - 1])
@@ -405,16 +407,18 @@ arraySource.map(
         canalActual = "canal1";
         canalPantalla.innerHTML = "TVE"
         sourcePantalla.innerHTML = "LIVE TV";
-        sourceSelec = 0;
         sourcePantalla.style.visibility = "visible";
         datePantalla.style.visibility = "visible";
         horaPantalla.style.visibility = "visible";
+        sourceSelec = 0;
+
         //Fecha y hora permanecen durante 3 segundos
         setTimeout(function () {
           sourcePantalla.style.visibility = "hidden";
           datePantalla.style.visibility = "hidden";
           horaPantalla.style.visibility = "hidden";
         }, 3000);
+
         //Activo la reproduccion del video
         video.pause();
         video.src = "./img/video1.mp4";
@@ -430,7 +434,6 @@ arrayVolumen.map(
   item => {
     item.addEventListener("click", (evento) => {
       //Condicion de estar la TV encendida
-      logoMute.style.visibility = "hidden";
       if (flagBoton == 1) {
         if ((evento.target.id === "btn+") && (currentVolume < maxVolume)) {
           currentVolume += 1;
@@ -439,14 +442,19 @@ arrayVolumen.map(
           currentVolume -= 1;
         }
         //Sumo valor a la variable
-        let volumenVideo = currentVolume/100;
+        let volumenVideo = currentVolume / 100;
         volumeLevel.style.height = currentVolume + '%';
+
         //Le doy visibilidad a la barra y desaparece a los 3 segudnos
+        logoMute.style.visibility = "hidden";
         volumeBar.style.visibility = "visible";
         volumeLevel.style.visibility = "visible";
+        volumenPantalla.innerHTML = currentVolume;
+        volumenPantalla.style.visibility = "visible"
         setTimeout(function () {
           volumeBar.style.visibility = "hidden";
           volumeLevel.style.visibility = "hidden";
+          volumenPantalla.style.visibility = "hidden"
         }, 4000);
         video.volume = volumenVideo;
       }
@@ -458,18 +466,25 @@ arrayVolumen.map(
 arrayMute.map(
   item => {
     item.addEventListener("click", (evento) => {
-      if (flagBoton == 1){
-      if(muteOn==0){
-      video.volume = 0;
-      logoMute.style.visibility = "visible";
-      muteOn++;
+      //Condicion de estar la TV encendida. Primera vez que pulsas se mutea
+      if (flagBoton == 1) {
+        if (muteOn == 0) {
+          //Muteo el sonido del video
+          video.volume = 0;
+          //Muestro info pantalla
+          volumeBar.style.visibility = "hidden";
+          volumeLevel.style.visibility = "hidden";
+          volumenPantalla.style.visibility = "hidden"
+          logoMute.style.visibility = "visible";
+          muteOn++;
+        }
+        //Segunda vez que pulsas se activa sonido
+        else {
+          video.volume = currentVolume / 100;
+          logoMute.style.visibility = "hidden";
+          muteOn = 0;
+        }
       }
-      else{
-      video.volume = currentVolume/100;
-      logoMute.style.visibility = "hidden";
-      muteOn = 0;
-      }
-    }
     })
   }
 )
@@ -478,12 +493,13 @@ arrayMute.map(
 arrayList.map(
   item => {
     item.addEventListener("click", (evento) => {
-      if (flagBoton == 1){
-      listChan.style.visibility = "visible";
-      setTimeout(function () {
-        listChan.style.visibility = "hidden";
-      }, 5000);
-    }
+      //Condicion de estar la TV encendida. Lo muestro durante 5 segundos
+      if (flagBoton == 1) {
+        listChan.style.visibility = "visible";
+        setTimeout(function () {
+          listChan.style.visibility = "hidden";
+        }, 5000);
+      }
     })
   }
 )
@@ -493,6 +509,7 @@ arrayList.map(
 arrayLed.map(
   item => {
     item.addEventListener("click", (evento) => {
+      //Funcionará siempre. Con cualquier boton hasta que el manda se quede sin pilas
       ledRemote.classList.remove(ledRemote.classList[ledRemote.classList.length - 1])
       ledRemote.classList.add("ledOn")
       setTimeout(function () {

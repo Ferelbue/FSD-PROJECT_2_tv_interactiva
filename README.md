@@ -1,6 +1,7 @@
 # TV INTERACTIVA :tv:
 Welcome to the interactive televison.
 This is the 2th project of the GeeksHub Academy Fullstack Developer Bootcamp, showcasing a real-world frontend development skills with HTML5, CSS3 and JavaScript.
+![TV INTERACTIVA](./img/image.png)
 ***
 ## Table of Contents 🗂️
 

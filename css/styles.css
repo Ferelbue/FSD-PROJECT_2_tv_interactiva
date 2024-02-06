@@ -9,7 +9,7 @@ body {
 }
 
 .dosJuntos {
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -82,18 +82,18 @@ body {
 
 #hora {
     color: chartreuse;
-    font-size: medium;
+    font-size: large;
 }
 
 #date {
     color: chartreuse;
-    font-size: medium;
+    font-size: large;
 
 }
 
 #canal {
     color: chartreuse;
-    font-size: medium;
+    font-size: large;
 }
 
 #source {
@@ -164,8 +164,8 @@ body {
 
 .scrennUpLeft {
 
-    width: 40em;
-    height: 4em;
+    width: 40rem;
+    height: 4rem;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -174,8 +174,8 @@ body {
 
 .scrennUpCenterLeft {
 
-    width: 10em;
-    height: 4em;
+    width: 10rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,8 +185,8 @@ body {
 
 .scrennUpCenterRight {
 
-    width: 10em;
-    height: 4em;
+    width: 10rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,7 +219,6 @@ body {
     align-items: center;
     text-align: center;
     box-sizing: content-box;
-
 }
 
 .scrennDownLeft {
@@ -807,18 +806,29 @@ body {
     color:white;
     visibility: hidden;
 }
+#numeroVol{
+    margin-right: 6.5rem;
+    position: absolute;
+    color:crimson;
+    visibility: hidden;
+    font-size: xx-large;
+    border-radius: 5rem;
+    background-color: rgb(255, 255, 255);
+    opacity: 70%;
+}
 
 #listChan{
-    margin-right: 32em;
-    height: 34em;
-    width: 35em;
+    margin-right: 43rem;
+    height: 34rem;
+    width: 27rem;
     position: absolute;
     color:white;
     visibility: hidden;
     background-color: black;
+    border-radius: 0.5em;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: large;
     opacity: 50%;
 }
